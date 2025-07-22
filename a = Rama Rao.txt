@@ -1,0 +1,1869 @@
+a = "Rama Rao"
+print(a) # Output: Rama Rao
+print(type(a)) # <class 'str'>
+print(id(a)) #  [A unique memory address, e.g., 140700346337456]
+b = 'Hyd'
+print(b) # Output: Hyd
+c = '''Hyd is green city.
+Hyd is hitec city.
+Hyd is beautiful city.'''
+print(c) # Output:
+         # Hyd is green city.
+         # Hyd is hitec city.
+         # Hyd is beautiful city.
+
+
+a = 'Hyd'
+print(a[0])      # Output: H
+                 # Explanation: Accesses the character at index 0 (the first character) of the string 'a'.
+
+print(a[1])      # Output: y
+                 # Explanation: Accesses the character at index 1 (the second character) of the string 'a'.
+
+print(a[2])      # Output: d
+                 # Explanation: Accesses the character at index 2 (the third character) of the string 'a'.
+
+print(a[3])      # Output: IndexError: string index out of range
+                 # Explanation: The string 'Hyd' only has indices 0, 1, and 2. Index 3 is out of bounds.
+
+print(a[-1])     # Output: d
+                 # Explanation: Accesses the character at the last position using negative indexing.
+
+print(a[-2])     # Output: y
+                 # Explanation: Accesses the character at the second to last position using negative indexing.
+
+print(a[-3])     # Output: H
+                 # Explanation: Accesses the character at the third to last position (which is the first character) using negative indexing.
+
+print(a[-4])     # Output: IndexError: string index out of range
+                 # Explanation: The string 'Hyd' only has negative indices -1, -2, and -3. Index -4 is out of bounds.
+
+print(a[0] == a[-3]) # Output: True
+                     # Explanation: Both a[0] and a[-3] refer to the character 'H', so the comparison is true.
+
+# a[2] = 'c'     # Output: TypeError: 'str' object does not support item assignment
+                 # Explanation: Strings in Python are immutable, meaning you cannot change individual characters after the string is created.
+
+# print(25[0])   # Output: TypeError: 'int' object is not subscriptable
+                 # Explanation: Integers are not sequences and do not support indexing.
+
+print('25'[0])   # Output: 2
+                 # Explanation: '25' is a string, and [0] correctly accesses its first character.
+
+# print(True[1]) # Output: TypeError: 'bool' object is not subscriptable
+                 # Explanation: Boolean values are not sequences and do not support indexing.
+
+print('True'[1]) # Output: r
+                 # Explanation: 'True' is a string, and [1] correctly accesses its second character.
+
+
+a = 'Hyd'
+print(a * 3)
+# Output: HydHydHyd
+# Explanation: The string 'a' is repeated 3 times.
+
+print(a * 2)
+# Output: HydHyd
+# Explanation: The string 'a' is repeated 2 times.
+
+print(a * 1)
+# Output: Hyd
+# Explanation: The string 'a' is repeated 1 time.
+
+print(a * 0)
+# Output:
+# Explanation: The string 'a' is repeated 0 times, resulting in an empty string.
+
+print(a * -1)
+# Output:
+# Explanation: The string 'a' is repeated -1 times, which also results in an empty string. Python treats negative repetitions the same as zero repetitions for strings.
+
+print(25 * 3)
+# Output: 75
+# Explanation: Standard multiplication of two integers.
+
+print('25' * 3)
+# Output: 252525
+# Explanation: The string '25' is repeated 3 times.
+
+print('25' * 4.0)
+# Output: TypeError: can't multiply sequence by non-int of type 'float'
+# Explanation: String multiplication (repetition) only works with an integer. You cannot multiply a string by a float.
+
+print(3 * 'Hyd')
+# Output: HydHydHyd
+# Explanation: The string 'Hyd' is repeated 3 times. The order of the string and integer in multiplication doesn't matter.
+
+print('25' * True)
+# Output: 25
+# Explanation: In Python, True is treated as 1 in numerical contexts. So, '25' is repeated 1 time.
+
+
+
+
+
+
+
+
+
+
+
+
+a = 'Hyd'
+print(a, id(a))
+# Output: Hyd 1407xxxxxxxxx (where 1407xxxxxxxxx is a memory address)
+# Explanation: 'a' is assigned the string 'Hyd'. This line prints the string value and its unique memory address.
+
+a = a * 3
+print(a, id(a))
+# Output: HydHydHyd 2049xxxxxxxxx (where 2049xxxxxxxxx is a *different* memory address)
+# Explanation: The expression 'a * 3' creates a *new* string object 'HydHydHyd'.
+# Because strings are immutable in Python, the original 'Hyd' object is not modified.
+# The variable 'a' is then reassigned to point to this new 'HydHydHyd' string object.
+
+
+
+
+print(len('Hyd'))
+# Output: 3
+# Explanation: The 'len()' function returns the number of characters in the string 'Hyd', which is 3.
+
+print(len('Rama Rao'))
+# Output: 8
+# Explanation: The 'len()' function returns the number of characters in the string 'Rama Rao'. Spaces are counted as characters.
+
+print(len('9247'))
+# Output: 4
+# Explanation: The 'len()' function returns the number of characters in the string '9247'.
+
+print(len(''))
+# Output: 0
+# Explanation: The 'len()' function returns the number of characters in an empty string, which is 0.
+
+print(len(' '))
+# Output: 1
+# Explanation: The 'len()' function returns the number of characters in the string containing a single space, which is 1.
+
+print(len(689))
+# Output: TypeError: object of type 'int' has no len()
+# Explanation: The 'len()' function is designed to work with sequences (like strings, lists, tuples, etc.) to return their length. It cannot be used directly on an integer (689) as integers do not have a concept of length.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = """"Hyd"""
+print(a)
+# Output: Hyd
+# Explanation: This statement assigns the string `"""Hyd"` to `a`. 
+
+print(a)
+# Output: (This line would not be reached due to the SyntaxError above)
+# Explanation: If the previous line had been valid, this would print the value of 'a'.
+
+print(len(a))
+# Output: (This line would not be reached due to the SyntaxError above)
+# Explanation: If 'a' were a valid string, this would print its length.
+
+print(a[0])
+# Output: (This line would not be reached due to the SyntaxError above)
+# Explanation: If 'a' were a valid string, this would print its first character.
+
+print("""Hyd""")
+# Output: Hyd
+# Explanation: This is a valid multi-line string literal defined by triple double quotes `"""`. It prints the string 'Hyd'.
+
+b = """""Hyd"""
+# Output: SyntaxError: invalid syntax
+# Explanation: Similar to the first assignment, the sequence of five double quotes `"""""` at the beginning is not a valid string literal definition in Python, resulting in a `SyntaxError`. Variable 'b' would not be assigned.
+
+print(b)
+# Output: (This line would not be reached due to the SyntaxError above)
+# Explanation: If the previous line had been valid, this would print the value of 'b'.
+
+print(len(b))
+# Output: (This line would not be reached due to the SyntaxError above)
+# Explanation: If 'b' were a valid string, this would print its length.
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = 'Sankar Dayal Sarma'
+
+print(a[7 : 12])
+# Output: Daya
+# Explanation: Slices from index 7 (inclusive 'D') up to, but not including, index 12 ('l'). So, 'Dayal'.
+
+print(a[7 : ])
+# Output: Dayal Sarma
+# Explanation: Slices from index 7 (inclusive 'D') to the end of the string.
+
+print(a[ : 6])
+# Output: Sankar
+# Explanation: Slices from the beginning of the string (index 0) up to, but not including, index 6 (the space).
+
+print(a[ : ])
+# Output: Sankar Dayal Sarma
+# Explanation: Slices from the beginning to the end, with a step of 1 (default). This creates a full copy of the string. Equivalent to a[0:18:1].
+
+print(a[: : ])
+# Output: Sankar Dayal Sarma
+# Explanation: Same as a[:], slices from the beginning to the end with the default step of 1.
+
+print(a[1 : 10 : 2])
+# Output: aanDya
+# Explanation: Slices from index 1 ('a') up to, but not including, index 10 ('a'), taking every 2nd character.
+# Indices: 1 (a), 3 (k), 5 (r), 7 (D), 9 (a)
+
+print(a[0 : : 2])
+# Output: SakrDylSm
+# Explanation: Slices from index 0 to the end, taking every 2nd character.
+# Indices: 0(S), 2(n), 4(a), 6( ), 8(a), 10(y), 12( ), 14(a), 16(r) -> 'Sankar Dayal Sarma'
+
+print(a[1 : : 2])
+# Output: an a ara
+# Explanation: Slices from index 1 to the end, taking every 2nd character.
+# Indices: 1(a), 3(k), 5(r), 7(D), 9(a), 11(l), 13(S), 15(r), 17(a) -> 'Sankar Dayal Sarma'
+
+print(a[-5 : -1])
+# Output: Sarm
+# Explanation: Slices from index -5 (inclusive 'S') up to, but not including, index -1 ('a').
+
+print(a[::-1])
+# Output: amraS layaD raknaS
+# Explanation: Slices the entire string in reverse order (step of -1).
+
+print(a[-1:-5:-1])
+# Output: amra
+# Explanation: Slices from index -1 (inclusive 'a') down to, but not including, index -5 ('S'), with a step of -1.
+# Characters are a(-1), m(-2), r(-3), a(-4).
+
+print(a[ : : -2])
+# Output: amSlyDknS
+# Explanation: Slices the entire string in reverse order, taking every second character.
+
+print(a[3 : -3])
+# Output: kar Dayal Sar
+# Explanation: Slices from index 3 (inclusive 'k') up to, but not including, index -3 ('r').
+# Characters included: k(3), a(4), r(5), (6), D(7), a(8), y(9), a(10), l(11), (12), S(13), a(14), r(15).
+
+print(a[2 : -5])
+# Output: nkar Dayal S
+# Explanation: Slices from index 2 (inclusive 'n') up to, but not including, index -5 ('S').
+# Characters included: n(2), k(3), a(4), r(5), (6), D(7), a(8), y(9), a(10), l(11), (12), S(13).
+
+print(a[-1:-5])
+# Output: (empty string)
+# Explanation: When slicing with a positive step (default 1), if the start index is greater than or equal to the stop index, an empty string is returned. Here, -1 is effectively "after" -5 when moving forward, so it results in an empty slice.
+
+print(a[3 : 3])
+# Output: (empty string)
+# Explanation: When the start index is equal to the stop index, an empty string is returned because the slice range is exclusive of the stop index.
+
+
+
+
+
+
+
+a = 'A'
+
+# print(a[1])
+# Output: Index Error: string index out of range
+# Explanation: The string 'A' has only one character at index 0. There is no character at index 1. Accessing an index that does not exist results in an IndexError.
+
+# print(a[1:])
+# Output: (empty string)
+# Explanation: This is a string slice operation. It attempts to slice from index 1 to the end of the string. Since index 1 is beyond the end of the string (which only has index 0), the slice returns an empty string.
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(int(10.8))
+# Output: 10
+# Explanation: Converts the float 10.8 to an integer by truncating the decimal part.
+
+print(int(True))
+# Output: 1
+# Explanation: Converts the boolean True to its integer equivalent, which is 1.
+
+print(int(False))
+# Output: 0
+# Explanation: Converts the boolean False to its integer equivalent, which is 0.
+
+print(int('25'))
+# Output: 25
+# Explanation: Converts the string '25' into an integer 25.
+
+print(int('0075'))
+# Output: 75
+# Explanation: Converts the string '0075' into an integer 75. Leading zeros are ignored.
+
+print(int(0B11010))
+# Output: 26
+# Explanation: Converts the binary literal 0B11010 (which is 1*16 + 1*8 + 0*4 + 1*2 + 0*1 = 26) to an integer.
+
+print(0B11010)
+# Output: 26
+# Explanation: This directly prints the integer value of the binary literal 0B11010.
+
+print(int(0O6247))
+# Output: 3239
+# Explanation: Converts the octal literal 0O6247 (which is 6*512 + 2*64 + 4*8 + 7*1 = 3072 + 128 + 32 + 7 = 3239) to an integer.
+
+print(0O6247)
+# Output: 3239
+# Explanation: This directly prints the integer value of the octal literal 0O6247.
+
+print(int(0XA7B9))
+# Output: 42937
+# Explanation: Converts the hexadecimal literal 0XA7B9 (which is 10*4096 + 7*256 + 11*16 + 9*1 = 40960 + 1792 + 176 + 9 = 42937) to an integer. (A=10, B=11)
+
+print(0XA7B9)
+# Output: 42937
+# Explanation: This directly prints the integer value of the hexadecimal literal 0XA7B9.
+
+print(int(3 + 4j))
+# Output: TypeError: int() argument must be a string, a bytes-like object or a real number, not 'complex'
+# Explanation: The `int()` function cannot convert complex numbers directly to integers. It expects real numbers (like floats or integers) or strings that represent integers.
+
+print(int('25.4'))
+# Output: ValueError: invalid literal for int() with base 10: '25.4'
+# Explanation: The `int()` function can only convert strings that represent whole numbers. 
+
+print(int('Ten'))
+# Output: ValueError: invalid literal for int() with base 10: 'Ten'
+# Explanation: The `int()` function cannot convert strings that contain non-numeric characters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(float(25))
+# Output: 25.0
+# Explanation: Converts the integer 25 to a float 25.0.
+
+print(float(True))
+# Output: 1.0
+# Explanation: Converts the boolean True to its float equivalent, which is 1.0.
+
+print(float(False))
+# Output: 0.0
+# Explanation: Converts the boolean False to its float equivalent, which is 0.0.
+
+print(float('92'))
+# Output: 92.0
+# Explanation: Converts the string '92' (representing an integer) to a float 92.0.
+
+print(float('36.4'))
+# Output: 36.4
+# Explanation: Converts the string '36.4' (representing a float) to a float 36.4.
+
+print(float('0075'))
+# Output: 75.0
+# Explanation: Converts the string '0075' (representing an integer with leading zeros) to a float 75.0. Leading zeros are ignored.
+
+print(float(0B1010101))
+# Output: 85.0
+# Explanation: Converts the binary literal 0B1010101 (which is 1*64 + 0*32 + 1*16 + 0*8 + 1*4 + 0*2 + 1*1 = 64 + 16 + 4 + 1 = 85) to a float 85.0.
+
+print(float(0O6247))
+# Output: 3239.0
+# Explanation: Converts the octal literal 0O6247 (which is 6*512 + 2*64 + 4*8 + 7*1 = 3072 + 128 + 32 + 7 = 3239) to a float 3239.0.
+
+print(float(0XA7B9))
+# Output: 42937.0
+# Explanation: Converts the hexadecimal literal 0XA7B9 (which is 10*4096 + 7*256 + 11*16 + 9*1 = 40960 + 1792 + 176 + 9 = 42937) to a float 42937.0.
+
+print(float(3 + 4j))
+# Output: TypeError: float() argument must be a string or a real number, not 'complex'
+# Explanation: The `float()` function cannot convert complex numbers directly to floats. It expects real numbers (like integers or other floats) or strings that represent real numbers.
+
+print(float('Ten'))
+# Output: ValueError: could not convert string to float: 'Ten'
+# Explanation: The `float()` function cannot convert strings that contain non-numeric characters (unless they are valid numeric literals). 'Ten' is not a valid floating-point literal.
+
+
+
+
+
+
+
+
+
+print(complex(3 , 4))
+# Output: (3+4j)
+# Explanation: Creates a complex number where the real part is 3 and the imaginary part is 4.
+
+print(complex(0 , 4))
+# Output: 4j
+# Explanation: Creates a complex number where the real part is 0 and the imaginary part is 4. Python omits the '0+' when the real part is zero.
+
+print(complex(3))
+# Output: (3+0j)
+# Explanation: Creates a complex number where the real part is 3 and the imaginary part defaults to 0.
+
+print(complex(3.8 , 4.6))
+# Output: (3.8+4.6j)
+# Explanation: Creates a complex number where the real part is 3.8 and the imaginary part is 4.6 (both floats are retained).
+
+print(complex(3.8))
+# Output: (3.8+0j)
+# Explanation: Creates a complex number where the real part is 3.8 and the imaginary part defaults to 0.
+
+print(complex(3 , 4.5))
+# Output: (3+4.5j)
+# Explanation: Creates a complex number where the real part is 3 and the imaginary part is 4.5.
+
+print(complex(True , False))
+# Output: (1+0j)
+# Explanation: Booleans are treated as their integer equivalents (True=1, False=0). So, it's complex(1, 0).
+
+print(complex(True))
+# Output: (1+0j)
+# Explanation: True is treated as 1, and the imaginary part defaults to 0.
+
+print(complex(False))
+# Output: 0j
+# Explanation: False is treated as 0, and the imaginary part defaults to 0. Python omits '0+0j' as just '0j'.
+
+print(complex(True , 4))
+# Output: (1+4j)
+# Explanation: True is treated as 1 for the real part, and 4 is used for the imaginary part.
+
+print(complex('3'))
+# Output: (3+0j)
+# Explanation: Parses the string '3' as the real part. The imaginary part defaults to 0.
+
+print(complex('3.8'))
+# Output: (3.8+0j)
+# Explanation: Parses the string '3.8' as the real part (a float). The imaginary part defaults to 0.
+
+print(complex(3 , '4'))
+# Output: TypeError: complex() second argument must be a number, not a str
+# Explanation: When two arguments are provided to `complex()`, both must be numbers (int, float, bool). A string cannot be directly used as the imaginary part in this form.
+
+print(complex('3' , 4))
+# Output: TypeError: complex() can't take second arg if first is a string
+# Explanation: If the first argument to `complex()` is a string, it is expected to be the *entire* complex number in string form (e.g., "3+4j"). You cannot provide a separate second argument (imaginary part) if the first argument is a string.
+
+print(complex('3' , '4'))
+# Output: TypeError: complex() can't take second arg if first is a string
+# Explanation: Similar to the previous case, if the first argument is a string, a second string argument is not allowed.
+
+print(complex('Ten'))
+# Output: ValueError: complex() arg is a malformed string
+# Explanation: The string 'Ten' cannot be parsed as a valid complex number. It must be in a numeric format (e.g., "3", "3.14", "2+5j").
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(bool(0))
+# Output: False
+# Explanation: The integer 0 is considered falsy.
+
+print(bool(10))
+# Output: True
+# Explanation: The integer 10 is a non-zero number, hence considered truthy.
+
+print(bool(-25))
+# Output: True
+# Explanation: The integer -25 is a non-zero number, hence considered truthy.
+
+print(bool(0.0))
+# Output: False
+# Explanation: The float 0.0 is considered falsy.
+
+print(bool(0.1))
+# Output: True
+# Explanation: The float 0.1 is a non-zero number, hence considered truthy.
+
+print(bool(0 + 0j))
+# Output: False
+# Explanation: A complex number where both the real and imaginary parts are zero is considered falsy.
+
+print(bool(10 + 20j))
+# Output: True
+# Explanation: A complex number is considered truthy if either its real part or its imaginary part (or both) are non-zero. Here, both are non-zero.
+
+print(bool(-15j))
+# Output: True
+# Explanation: A complex number with a non-zero imaginary part (-15) is considered truthy, even if the real part is implicitly zero.
+
+print(bool('False'))
+# Output: True
+# Explanation: This is a non-empty string. Any non-empty string, regardless of its content, is considered truthy.
+
+print(bool(''))
+# Output: False
+# Explanation: An empty string is considered falsy.
+
+print(bool('Hyd'))
+# Output: True
+# Explanation: This is a non-empty string, hence considered truthy.
+
+print(bool(' '))
+# Output: True
+# Explanation: This is a non-empty string (it contains a space character), hence considered truthy.
+
+print(bool('True'))
+# Output: True
+# Explanation: This is a non-empty string, hence considered truthy.
+
+
+
+
+
+
+
+
+
+
+
+
+print(str(25))
+# Output: '25'
+# Explanation: Converts the integer 25 into its string representation '25'.
+
+print(str(10.8))
+# Output: '10.8'
+# Explanation: Converts the float 10.8 into its string representation '10.8'.
+
+print(str(3 + 4j))
+# Output: '(3+4j)'
+# Explanation: Converts the complex number 3+4j into its string representation '(3+4j)'. Note the parentheses around the complex number.
+
+print(str(True))
+# Output: 'True'
+# Explanation: Converts the boolean True into its string representation 'True'.
+
+print(str(False))
+# Output: 'False'
+# Explanation: Converts the boolean False into its string representation 'False'.
+
+print(str(None))
+# Output: 'None'
+# Explanation: Converts the special None object into its string representation 'None'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+print(oct(195))
+# Output: 0o303
+# Explanation: Converts the decimal integer 195 to its octal representation.
+# Reading remainders from bottom to top: 303. 
+
+print(oct(0B10101110010))
+# Output: 0o2562
+# Explanation: First, 0B10101110010 is a binary literal. Python converts this binary number to an integer internally, then `oct()` converts that integer to its octal string representation.
+# Binary to Decimal: 1*1024 + 0*512 + 1*256 + 0*128 + 1*64 + 1*32 + 1*16 + 0*8 + 0*4 + 1*2 + 0*1 = 1024 + 256 + 64 + 32 + 16 + 2 = 1394
+# Reading remainders from bottom to top: 2562.
+
+print(oct(0xA7B9))
+# Output: 0o123671
+# Explanation: First, 0xA7B9 is a hexadecimal literal. Python converts this hexadecimal number to an integer internally, then `oct()` converts that integer to its octal string representation.
+# Hexadecimal to Decimal: A=10, B=11
+# 10*4096 + 7*256 + 11*16 + 9*1 = 40960 + 1792 + 176 + 9 = 42937
+# Reading remainders from bottom to top: 123671. 
+
+
+
+
+
+
+
+
+
+print(hex(25))
+# Output: 0x19
+# Explanation: Converts the decimal integer 25 to its hexadecimal representation.
+# Reading remainders from bottom to top: 19.
+
+print(hex(0B10101111010111))
+# Output: 0x2bd7
+# Explanation: First, 0B10101111010111 is a binary literal. Python converts this binary number to an integer internally, then `hex()` converts that integer to its hexadecimal string representation.
+# Binary to Decimal:
+# 1 * 8192 + 0 * 4096 + 1 * 2048 + 0 * 1024 + 1 * 512 + 1 * 256 + 1 * 128 + 1 * 64 + 0 * 32 + 1 * 16 + 0 * 8 + 1 * 4 + 1 * 2 + 1 * 1
+# = 8192 + 2048 + 512 + 256 + 128 + 64 + 16 + 4 + 2 + 1 = 11223
+# Reading remainders from bottom to top: 2BD7.
+
+print(hex(0O6247))
+# Output: 0xca7
+# Explanation: First, 0O6247 is an octal literal. Python converts this octal number to an integer internally, then `hex()` converts that integer to its hexadecimal string representation.
+# Octal to Decimal:
+# 6*512 + 2*64 + 4*8 + 7*1 = 3072 + 128 + 32 + 7 = 3239
+# Reading remainders from bottom to top: CA7.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = range(10 , 50 , 5)
+
+print(type(a))
+# Output: <class 'range'>
+# Explanation: This prints the data type of the variable 'a', which is a 'range' object.
+
+print(a)
+# Output: range(10, 50, 5)
+# Explanation: Printing a 'range' object directly shows its internal representation (start, end, step), rather than all the numbers it contains.
+
+print(*a)
+# Output: 10 15 20 25 30 35 40 45
+# Explanation: The `*` operator unpacks the elements of the 'range' object and passes them as separate arguments to the `print()` function, which then prints them separated by spaces.
+
+print(id(a))
+# Output: [A unique memory address, e.g., 140700346337456]
+# Explanation: This prints the unique memory address where the `range` object 'a' is stored. The actual address will be different each time the program runs.
+
+print(len(a))
+# Output: 8
+# Explanation: The `len()` function calculates the number of elements in the range. The formula is (stop - start) // step, which is (50 - 10) // 5 = 40 // 5 = 8.
+
+print(*a[2 : 7] , sep = ' , ')
+# Output: 20 , 25 , 30 , 35 , 40
+# Explanation: This first creates a slice of the 'range' object from index 2 (inclusive) to 7 (exclusive). This new range contains the numbers 20, 25, 30, 35, 40. The `*` operator unpacks these numbers and the `sep` argument specifies a comma and a space as the separator.
+
+print(*a[ : : -1])
+# Output: 45 40 35 30 25 20 15 10
+# Explanation: This creates a reverse slice of the entire 'range' object (step is -1), which generates the numbers in reverse order. The `*` operator unpacks and prints them.
+
+# a[4] = 32
+# Output: Type Error: 'range' object does not support item assignment
+# Explanation: `range` objects are **immutable**, meaning their elements cannot be changed or modified after creation. Attempting to assign a new value to an index results in a `Type Error`.
+
+# print(a * 2)
+# Output: Type Error: unsupported operand type(s) for *: 'range' and 'int'
+# Explanation: The `range` object does not support the multiplication operator. You cannot repeat or multiply a `range` object.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# a = range(10 , 20)
+# print(*a , sep = ',')
+# Output: 10,11,12,13,14,15,16,17,18,19
+# Explanation: A 'range' object is created with a starting value of 10 (inclusive) and an ending value of 20 (exclusive). The default step is 1. The `*` operator unpacks these numbers and the `sep` argument specifies a comma as the separator.
+
+# b = range(5)
+# print(*b)
+# Output: 0 1 2 3 4
+# Explanation: When `range()` is called with a single argument, it is treated as the stop value, with the start defaulting to 0 and the step defaulting to 1. The `*` operator unpacks and prints the numbers with a default space separator.
+
+# c = range(10 , 1 , -1)
+# print(*c , sep = '...')
+# Output: 10...9...8...7...6...5...4...3...2
+# Explanation: A 'range' is created starting at 10 and counting down to 1 (exclusive) with a step of -1. The `*` operator unpacks the numbers and the `sep` argument specifies '...' as the separator.
+
+# d = range(-10 , 0)
+# print(*d)
+# Output: -10 -9 -8 -7 -6 -5 -4 -3 -2 -1
+# Explanation: A 'range' is created starting at -10 (inclusive) and ending at 0 (exclusive) with a default step of 1.
+
+# e = range(-10)
+# print(*e)
+# Output: (empty line)
+# Explanation: When `range()` is called with a single negative argument, it is interpreted as `range(0, -10)`. Since the start (0) is greater than the stop (-10) and the step is positive (the default 1), the range is empty. Unpacking an empty sequence results in no output.
+
+# f = range(2 , 2)
+# print(*f)
+# Output: (empty line)
+# Explanation: The start and stop values are the same. Since the `range` function's stop value is exclusive, the range is empty. Unpacking an empty sequence results in no output.
+
+# g = range(10 , 11 , 0.1)
+# Output: Type Error: 'float' object cannot be interpreted as an integer
+# Explanation: The `range()` function requires all its arguments (start, stop, and step) to be integers. A `Type Error` is raised when a float (0.1) is used as the step.
+
+# h = range('A' , 'F')
+# Output: Type Error: 'str' object cannot be interpreted as an integer
+# Explanation: The `range()` function requires all its arguments to be integers. A `Type Error` is raised when strings are used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+r = range(10 , 17 , 3)
+
+a , b , c = r
+print(a , b , c)
+# Output: 10 13 16
+# Explanation: The 'range' object 'r' contains three elements (10, 13, 16). The variables 'a', 'b', and 'c' are assigned to these elements in order, and the `print()` function displays their values.
+
+r = range(3)
+
+x , y = r
+# Output: Value Error: too many values to unpack (expected 2)
+# Explanation: The 'range' object 'r' now contains three elements (0, 1, 2). The assignment statement tries to unpack these three elements into only two variables ('x' and 'y'). Since the number of elements does not match the number of variables, a `Value Error` is raised.
+
+p , q , r , s = r
+# Output: Value Error: not enough values to unpack (expected 4, got 3)
+# Explanation: The 'range' object 'r' contains three elements (0, 1, 2). The assignment statement tries to unpack these into four variables ('p', 'q', 'r', 's'). Since there are not enough elements to fill all the variables, a `Value Error` is raised.
+
+a , b , c = *r
+# Output: Syntax Error: can't use starred expression here
+# Explanation: The starred expression `*r` cannot be used on the right-hand side of a simple assignment statement in this manner. The correct way to unpack a sequence like `range` is `a, b, c = r` without the `*`. This is a `Syntax Error` and would prevent the program from running.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = [25 , 10.8 , 'Hyd' , True , 3 + 4j , None , 'Hyd' , 25]
+print(a)
+# Output: [25, 10.8, 'Hyd', True, (3+4j), None, 'Hyd', 25]
+# Explanation: This prints the entire list object, including the square brackets and the comma-separated elements. The complex number is printed with parentheses around it.
+
+print(*a)
+# Output: 25 10.8 Hyd True (3+4j) None Hyd 25
+# Explanation: The `*` operator unpacks the list's elements, and the `print()` function then prints them as individual arguments, separated by spaces.
+
+print(type(a))
+# Output: <class 'list'>
+# Explanation: This shows that the data type of the variable 'a' is a list.
+
+print(id(a))
+# Output: [A unique memory address, e.g., 2049082728944]
+# Explanation: This prints the unique memory address in which the list object `a` is stored. The exact value will vary with each run.
+
+print(len(a))
+# Output: 8
+# Explanation: The `len()` function returns the number of elements in the list, which is 8.
+
+a[2] = 'Sec'
+# Explanation: Lists are mutable. This statement replaces the element at index 2 (which was 'Hyd') with the new string 'Sec'.
+
+print(a)
+# Output: [25, 10.8, 'Sec', True, (3+4j), None, 'Hyd', 25]
+# Explanation: This prints the modified list. The element at index 2 has been changed from 'Hyd' to 'Sec'. The memory address of the list itself remains the same because the list was modified in place.
+
+print(a[2 : 5])
+# Output: ['Sec', True, (3+4j)]
+# Explanation: This is a slice operation. It creates a new list containing the elements from index 2 (inclusive) up to, but not including, index 5. The new list contains the modified element 'Sec', followed by the original elements True and (3+4j).
+
+
+
+
+
+
+
+
+
+
+
+a = [ ]
+print(a)
+# Output: []
+# Explanation: This prints the empty list that has just been created and assigned to the variable 'a'.
+
+a . append(25)
+a . append(10.8)
+a . append('Hyd')
+a . append(True)
+# Explanation: These statements add the specified elements to the end of the list 'a'.
+
+print(a)
+# Output: [25, 10.8, 'Hyd', True]
+# Explanation: This prints the list after the four elements have been appended.
+
+a . remove('Hyd')
+# Explanation: This statement removes the first occurrence of the element with the value 'Hyd' from the list.
+
+print(a)
+# Output: [25, 10.8, True]
+# Explanation: This prints the list after 'Hyd' has been successfully removed.
+
+a . remove('25')
+# Output: Value Error: list.remove(x): x not in list
+# Explanation: This statement attempts to remove the string '25' from the list. However, the list contains the integer `25`, not the string `'25'`. Since the `remove()` method requires an exact match of the value and type, and the value `'25'` is not present, a `Value Error` is raised. The program stops at this point.
+
+print(a)
+# Output: (This line would not be reached due to the Value Error above)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = [25 , 10.8 , 'Hyd']
+print(a)
+# Output: [25, 10.8, 'Hyd']
+# Explanation: Prints the list `a` as it is defined.
+
+print(id(a))
+# Output: [A unique memory address, e.g., 2049082728944]
+# Explanation: This prints the unique memory address of the list object `a`.
+
+print(a * 3)
+# Output: [25, 10.8, 'Hyd', 25, 10.8, 'Hyd', 25, 10.8, 'Hyd']
+# Explanation: Creates and prints a new list containing the elements of `a` repeated 3 times.
+
+print(a * 2)
+# Output: [25, 10.8, 'Hyd', 25, 10.8, 'Hyd']
+# Explanation: Creates and prints a new list with the elements of `a` repeated 2 times.
+
+print(a * 1)
+# Output: [25, 10.8, 'Hyd']
+# Explanation: Creates and prints a new list with the elements of `a` repeated 1 time, which is a shallow copy of the original list.
+
+print(a * 0)
+# Output: []
+# Explanation: Creates and prints a new empty list.
+
+print(a * -1)
+# Output: []
+# Explanation: Multiplies by a negative integer, which also results in a new empty list.
+
+print(a * 4.0)
+# Output: TypeError: can't multiply sequence by non-int of type 'float'
+# Explanation: List repetition (multiplication) only works with integers, not floats.
+
+a = a * 3
+# Explanation: The expression `a * 3` creates a *new* list object with repeated elements. The variable `a` is then reassigned to refer to this new list.
+
+print(a)
+# Output: [25, 10.8, 'Hyd', 25, 10.8, 'Hyd', 25, 10.8, 'Hyd']
+# Explanation: Prints the newly created, longer list that `a` now references.
+
+print(id(a))
+# Output: [A new and different memory address, e.g., 2049082729900]
+# Explanation: This prints the memory address of the new list object. This address will be different from the original one, proving that a new object was created and the variable was reassigned.
+
+a = [25]
+# Explanation: `a` is reassigned to a new list containing just the integer 25.
+
+print(a * a)
+# Output: Type Error: can't multiply sequence by non-int of type 'list'
+# Explanation: Lists cannot be multiplied by other lists. The multiplication operator is only defined for multiplying a list by an integer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = list('Hyd')
+print(a)
+# Output: ['H', 'y', 'd']
+# Explanation: The `list()` function takes the string 'Hyd' (which is a sequence of characters) and creates a new list with each character as an element.
+
+print(type(a))
+# Output: <class 'list'>
+# Explanation: This confirms that the data type of the variable 'a' is a list.
+
+print(len(a))
+# Output: 3
+# Explanation: The `len()` function returns the number of elements in the list 'a', which is 3.
+
+b = (10 , 20 , 15 , 18)
+print(list(b))
+# Output: [10, 20, 15, 18]
+# Explanation: The `list()` function takes the tuple `b` (a sequence) and converts it into a new list.
+
+print(list(range(5)))
+# Output: [0, 1, 2, 3, 4]
+# Explanation: The `range(5)` function creates a sequence of numbers from 0 to 4. The `list()` function converts this sequence into a list.
+
+print(list(25))
+# Output: Type Error: 'int' object is not iterable
+# Explanation: The `list()` function can only convert objects that are "iterable" (i.e., sequences like strings, tuples, lists, or ranges). An integer like 25 is not a sequence, so this conversion is not possible and a `Type Error` is raised.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = [ ]
+print(type(a))
+# Output: <class 'list'>
+# Explanation: This prints the data type of the variable 'a', which is a list.
+
+print(a)
+# Output: []
+# Explanation: This prints the empty list that was created using the list literal syntax `[]`.
+
+print(len(a))
+# Output: 0
+# Explanation: The `len()` function returns the number of elements in the list, which is 0 since it is empty.
+
+b = list()
+print(b)
+# Output: []
+# Explanation: This prints the empty list that was created using the `list()` constructor with no arguments.
+
+print(len(b))
+# Output: 0
+# Explanation: The `len()` function returns the number of elements in the list `b`, which is also 0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+list = [25 , 10.8 , 3 + 4j , 'Hyd' , True , None , 10.8 , 'Hyd']
+
+print(list[2 : 7])
+# Output: [(3+4j), 'Hyd', True, None, 10.8]
+# Explanation: Slices from index 2 (inclusive) up to, but not including, index 7.
+
+print(list[ : : ])
+# Output: [25, 10.8, (3+4j), 'Hyd', True, None, 10.8, 'Hyd']
+# Explanation: Slices the entire list from start to end with a step of 1, creating a shallow copy.
+
+print(list[:])
+# Output: [25, 10.8, (3+4j), 'Hyd', True, None, 10.8, 'Hyd']
+# Explanation: Same as the above. An empty slice returns a shallow copy of the entire list.
+
+print(list[ : : -1])
+# Output: ['Hyd', 10.8, None, True, 'Hyd', (3+4j), 10.8, 25]
+# Explanation: Slices the entire list with a step of -1, which reverses the order of the elements.
+
+print(list[ : : 2])
+# Output: [25, (3+4j), True, 10.8]
+# Explanation: Slices from the beginning to the end, taking every second element (at indices 0, 2, 4, 6).
+
+print(list[1 : : 2])
+# Output: [10.8, 'Hyd', None, 'Hyd']
+# Explanation: Slices from index 1 to the end, taking every second element (at indices 1, 3, 5, 7).
+
+print(list[ : : -2])
+# Output: ['Hyd', None, True, 10.8]
+# Explanation: Slices from the end of the list to the beginning, taking every second element (at indices -1, -3, -5, -7). The provided note in the prompt contains a typo for the output.
+
+print(list[-2 : : -2])
+# Output: [10.8, True, (3+4j), 25]
+# Explanation: Slices from index -2 to the beginning, taking every second element (at indices -2, -4, -6, -8).
+
+print(list[1 : 4])
+# Output: [10.8, (3+4j), 'Hyd']
+# Explanation: Slices from index 1 (inclusive) up to, but not including, index 4.
+
+print(list[-4 : -1])
+# Output: [True, None, 10.8]
+# Explanation: Slices from index -4 (inclusive) up to, but not including, index -1.
+
+print(list[3 : -3])
+# Output: ['Hyd', True]
+# Explanation: Slices from index 3 (inclusive) up to, but not including, index -3. Index -3 corresponds to `None`. The slice includes elements at indices 3 and 4.
+
+print(list[2 : -5])
+# Output: [(3+4j)]
+# Explanation: Slices from index 2 (inclusive) up to, but not including, index -5. Index -5 corresponds to `3 + 4j`. The slice only contains the single element at index 2.
+
+print(list[-1:-5])
+# Output: []
+# Explanation: Slicing with a positive step (the default) requires the start index to be less than the stop index. Since -1 is greater than -5, this slice results in an empty list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = [10 , 20 , 30 , 40 , 50]
+print(a , id(a))
+# Output: [10, 20, 30, 40, 50] [A unique memory address, e.g., 2049082728944]
+# Explanation: This prints the initial list and its memory address.
+
+a[1 : 4] = [60 , 70]
+print(a , id(a))
+# Output: [10, 60, 70, 50] [The same memory address as before]
+# Explanation: This is a slice assignment. The elements at indices 1, 2, and 3 ([20, 30, 40]) are replaced by the new list [60, 70]. The list is modified *in place*, so the memory address remains the same.
+
+a[2: 4] = [100 , 200 , 300]
+print(a , id(a))
+# Output: [10, 60, 100, 200, 300] [The same memory address as before]
+# Explanation: The list `a` is now `[10, 60, 70, 50]`. This statement replaces the elements at indices 2 and 3 ([70, 50]) with the new list [100, 200, 300]. The list is modified in place again, so the memory address does not change.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = [25]
+print(a[1])
+# Output: Index Error: list index out of range
+# Explanation: The list 'a' has only one element at index 0. There is no element at index 1. Attempting to access an index that does not exist raises an `Index Error`.
+
+print(a[1:])
+# Output: []
+# Explanation: This is a slice operation. It attempts to create a new list containing elements from index 1 to the end. Since index 1 is beyond the end of the list, the slice is empty. Slicing does not raise an error when indices are out of bounds; it simply returns an empty list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = (25)
+b = 25,
+c = 25
+d = (25,)
+
+print(type(a))
+# Output: <class 'int'>
+# Explanation: The parentheses around '25' are used for grouping and do not create a tuple. 'a' is simply assigned the integer 25.
+
+print(type(b))
+# Output: <class 'tuple'>
+# Explanation: The comma after the number is the key to creating a tuple with a single element.
+
+print(type(c))
+# Output: <class 'int'>
+# Explanation: This is a standard integer assignment. 'c' is assigned the integer 25.
+
+print(type(d))
+# Output: <class 'tuple'>
+# Explanation: This is the standard, unambiguous syntax for creating a tuple with a single element. The parentheses and the comma together define the tuple.
+
+print(a * 4)
+# Output: 100
+# Explanation: 'a' is an integer, so this performs standard integer multiplication (25 * 4).
+
+print(b * 4)
+# Output: (25, 25, 25, 25)
+# Explanation: 'b' is a tuple. The multiplication operator on a tuple performs repetition, creating a new tuple with the elements of 'b' repeated 4 times.
+
+print(c * 4)
+# Output: 100
+# Explanation: 'c' is an integer, so this performs standard integer multiplication (25 * 4).
+
+print(d * 4)
+# Output: (25, 25, 25, 25)
+# Explanation: 'd' is a tuple. The multiplication operator on a tuple performs repetition, creating a new tuple with the elements of 'd' repeated 4 times.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = tuple('Hyd')
+print(a)
+# Output: ('H', 'y', 'd')
+# Explanation: The `tuple()` function takes the string 'Hyd' (which is a sequence of characters) and creates a new tuple with each character as an element.
+
+print(type(a))
+# Output: <class 'tuple'>
+# Explanation: This confirms that the data type of the variable 'a' is a tuple.
+
+print(len(a))
+# Output: 3
+# Explanation: The `len()` function returns the number of elements in the tuple 'a', which is 3.
+
+b = [10 , 20 , 15 , 18]
+print(tuple(b))
+# Output: (10, 20, 15, 18)
+# Explanation: The `tuple()` function takes the list `b` (a sequence) and converts it into a new tuple.
+
+print(tuple(range(5)))
+# Output: (0, 1, 2, 3, 4)
+# Explanation: The `range(5)` function creates a sequence of numbers from 0 to 4. The `tuple()` function converts this sequence into a tuple.
+
+print(tuple(25))
+# Output: Type Error: 'int' object is not iterable
+# Explanation: The `tuple()` function can only convert objects that are "iterable" (i.e., sequences like strings, lists, tuples, or ranges). An integer like 25 is not a sequence, so this conversion is not possible and a `Type Error` is raised.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = ()
+print(type(a))
+# Output: <class 'tuple'>
+# Explanation: This prints the data type of the variable 'a', which is a tuple.
+
+print(a)
+# Output: ()
+# Explanation: This prints the empty tuple that was created using the tuple literal syntax `()`.
+
+print(len(a))
+# Output: 0
+# Explanation: The `len()` function returns the number of elements in the tuple, which is 0 since it is empty.
+
+b = tuple()
+print(b)
+# Output: ()
+# Explanation: This prints the empty tuple that was created using the `tuple()` constructor with no arguments.
+
+print(len(b))
+# Output: 0
+# Explanation: The `len()` function returns the number of elements in the tuple `b`, which is also 0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = (10 , 20 , 30)
+print(a)
+# Output: (10, 20, 30)
+# Explanation: Prints the tuple `a` as it is defined.
+
+print(id(a))
+# Output: [A unique memory address, e.g., 2049082728944]
+# Explanation: This prints the unique memory address of the tuple object `a`.
+
+a = a * 2
+# Explanation: The expression `a * 2` performs tuple repetition, which creates a *new* tuple object `(10, 20, 30, 10, 20, 30)`. Because tuples are immutable, the original object is not changed. The variable `a` is then reassigned to point to this new object.
+
+print(a)
+# Output: (10, 20, 30, 10, 20, 30)
+# Explanation: Prints the newly created, longer tuple that `a` now references.
+
+print(id(a))
+# Output: [A new and different memory address, e.g., 2049082729900]
+# Explanation: This prints the memory address of the new tuple object. This address will be different from the original one, proving that a new object was created and the variable was reassigned.
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = {25 , 10.8 , 'Hyd' , True , 3+4j , None , 25 , 'Hyd'}
+
+print(a)
+# Output: {True, None, 10.8, 25, 'Hyd', (3+4j)}
+# Explanation: Sets are unordered collections of unique elements. The duplicate values (the second `25` and `Hyd`) are discarded. The order of elements in the output is not guaranteed and can vary between Python versions or runs. Note that `True` is not treated as `1` here, so both are included.
+
+print(type(a))
+# Output: <class 'set'>
+# Explanation: This confirms the data type of the variable `a` is a set.
+
+print(len(a))
+# Output: 6
+# Explanation: The `len()` function returns the number of unique elements in the set, which is 6.
+
+print(a[2])
+# Output: Type Error: 'set' object is not subscriptable
+# Explanation: Sets are unordered and do not support indexing or direct element access. A `Type Error` is raised.
+
+print(a[1 : 4])
+# Output: Type Error: 'set' object is not subscriptable
+# Explanation: Similar to indexing, sets do not support slicing. A `TypeError` is raised.
+
+a[2] = 'Sec'
+# Output: Type Error: 'set' object does not support item assignment
+# Explanation: Sets are mutable, but they do not support item assignment by index because they are unordered. You must use methods like `add()` or `remove()`.
+
+print(a * 2)
+# Output: Type Error: unsupported operand type(s) for *: 'set' and 'int'
+# Explanation: The multiplication (repetition) operator is not supported for set objects.
+
+print(a * a)
+# Output: Type Error: unsupported operand type(s) for *: 'set' and 'set'
+# Explanation: Sets cannot be multiplied by other sets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = {1 , 'Hyd' , False , True , 0.0 , '' , 1.0 , 0}
+print(a)
+# Output: {False, 1, '', 'Hyd'}  (The order may vary)
+# Explanation: Sets store only unique elements. Python's set treats certain values as equal for uniqueness checks:
+# - `False`, `0`, and `0.0` are all considered the same. Only one is stored.
+# - `True`, `1`, and `1.0` are all considered the same. Only one is stored.
+# - The empty string `''` and the string `'Hyd'` are unique.
+# Therefore, the set contains only four unique elements: one for the group of zeros/False, one for the group of ones/True, and the two unique strings.
+
+print(len(a))
+# Output: 4
+# Explanation: The `len()` function returns the number of unique elements in the set, which, as explained above, is 4.
+
+print(type(a))
+# Output: <class 'set'>
+# Explanation: This confirms the data type of the variable `a` is a set.
+
+
+
+
+
+
+
+
+
+
+a = set('Rama rAo')
+print(a)
+# Output: {'R', 'a', 'm', ' ', 'r', 'o'}  (The order may vary)
+# Explanation: The `set()` function takes the string and converts it into a set of its unique characters. Case matters ('R' and 'r' are different), and spaces are included.
+
+print(len(a))
+# Output: 6
+# Explanation: There are 6 unique characters in the string "Rama rAo".
+
+print(set([10 , 20 , 15 , 20]))
+# Output: {10, 20, 15}  (The order may vary)
+# Explanation: The `set()` function converts the list into a set, automatically removing the duplicate `20`.
+
+print(set((25 , 10.8 , 'Hyd' , 10.8)))
+# Output: {10.8, 'Hyd', 25}  (The order may vary)
+# Explanation: The `set()` function converts the tuple into a set, automatically removing the duplicate `10.8`.
+
+print(set(range(10 , 20 , 3)))
+# Output: {10, 13, 16, 19}  (The order may vary)
+# Explanation: The `range()` object is an iterable. The `set()` function converts it into a set of the numbers it generates.
+
+print(set(25))
+# Output: Type Error: 'int' object is not iterable
+# Explanation: The `set()` function requires an iterable object (like a string, list, or tuple) as its argument. An integer is not iterable, so a `Type Error` is raised.
+
+print(set([25 , 10.8 , [] , 'Hyd']))
+# Output: Type Error: unhashable type: 'list'
+# Explanation: Set elements must be "hashable" (immutable). A list (`[]`) is a mutable object and is therefore not hashable. This causes a `Type Error` when the `set()` function tries to add it as an element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = [ ]
+b = ( )
+c = {}
+d = set()
+
+print(type(a))
+# Output: <class 'list'>
+# Explanation: The `[]` literal syntax creates an empty list.
+
+print(type(b))
+# Output: <class 'tuple'>
+# Explanation: The `()` literal syntax creates an empty tuple.
+
+print(type(c))
+# Output: <class 'dict'>
+# Explanation: This is a common point of confusion. The `{}` literal syntax creates an empty **dictionary**, not a set.
+
+print(type(d))
+# Output: <class 'set'>
+# Explanation: The `set()` constructor must be used to create an empty set.
+
+print(a)
+# Output: []
+# Explanation: Prints the empty list.
+
+print(b)
+# Output: ()
+# Explanation: Prints the empty tuple.
+
+print(c)
+# Output: {}
+# Explanation: Prints the empty dictionary.
+
+print(d)
+# Output: set()
+# Explanation: Prints the empty set. Python's representation of an empty set is `set()` to distinguish it from the empty dictionary literal `{}`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = set()
+a . add(25)
+a . add(10.8)
+a . add('Hyd')
+a . add(True)
+a . add(None)
+a . add('Hyd')
+a . add(1)
+# Explanation: These lines add elements to the set. Sets only store unique, hashable elements.
+# - 'Hyd' is added once. The second `add('Hyd')` does nothing.
+# - The integer `1` is considered equal to the boolean `True`. Since `True` was added first, the `a.add(1)` operation does not change the set's contents.
+# The set `a` now contains 5 unique elements: `{True, None, 10.8, 25, 'Hyd'}` (order may vary).
+
+print(a)
+# Output: {True, None, 10.8, 25, 'Hyd'} (Order may vary)
+# Explanation: Prints the final set after all additions.
+
+print(len(a))
+# Output: 5
+# Explanation: The set contains 5 unique elements.
+
+a . remove(25)
+# Explanation: This removes the element 25 from the set.
+
+print(a)
+# Output: {True, None, 10.8, 'Hyd'} (Order may vary)
+# Explanation: Prints the set after 25 has been removed. It now contains 4 elements.
+
+a . append(100)
+# Output: Attribute Error: 'set' object has no attribute 'append'
+# Explanation: Sets do not have an `append()` method. You must use `add()` to add a single element. This error stops the program's execution. The remaining lines in the code will not be executed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Create a sample set
+a = {25 , True , 'Hyd' , 10.8}
+
+#set with print function
+{True, 10.8, 'Hyd', 25}  (Note: The order of elements in the output is not guaranteed)
+Iterate thru set with for loop
+True
+10.8
+Hyd
+25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = {10 : 'Ramesh' , 20 : 'Kiran' , 15 : 'Amar' , 18 : 'Sita'}
+
+print(a)
+# Output: {10: 'Ramesh', 20: 'Kiran', 15: 'Amar', 18: 'Sita'}
+# Explanation: Prints the dictionary as a literal.
+
+print(type(a))
+# Output: <class 'dict'>
+# Explanation: Shows that the data type of the variable `a` is a dictionary.
+
+print(a[10])
+# Output: Ramesh
+print(a[20])
+# Output: Kiran
+print(a[15])
+# Output: Amar
+print(a[18])
+# Output: Sita
+# Explanation: Dictionary values are accessed by placing their key inside square brackets.
+
+# Errors during program execution
+
+print(a[19])
+# Output: Key Error: 19
+# Explanation: This key does not exist in the dictionary. Attempting to access it raises a `Key Error`.
+
+print(a[0])
+# Output: Key Error: 0
+# Explanation: The key `0` does not exist in the dictionary.
+
+print(a['Amar'])
+# Output: Key Error: 'Amar'
+# Explanation: The value 'Amar' is not a key. Dictionary values cannot be accessed using their values.
+
+# The following code demonstrates how to modify the dictionary:
+
+# Modify the value of key 15
+a[15] = 'Krishna'
+# The dictionary is now: {10: 'Ramesh', 20: 'Kiran', 15: 'Krishna', 18: 'Sita'}
+
+# Remove the key-value pair 20 : 'Kiran'
+del a[20]
+# The dictionary is now: {10: 'Ramesh', 15: 'Krishna', 18: 'Sita'}
+
+# Add a new key-value pair 25 : 'Vamsi'
+a[25] = 'Vamsi'
+# The dictionary is now: {10: 'Ramesh', 15: 'Krishna', 18: 'Sita', 25: 'Vamsi'}
+
+print(a)
+# Output: {10: 'Ramesh', 15: 'Krishna', 18: 'Sita', 25: 'Vamsi'}
+# Explanation: Prints the dictionary after all modifications.
+
+print(len(a))
+# Output: 4
+# Explanation: The dictionary started with 4 elements, one was removed and one was added, so the length remains 4.
+
+print(a * 2)
+# Output: Type Error: unsupported operand type(s) for *: 'dict' and 'int'
+# Explanation: Dictionaries do not support the multiplication operator. This results in a `Type Error`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = {10 : 'Hyd' , 10 : 'Sec'}
+# Explanation: Dictionaries cannot have duplicate keys. When a key is repeated during creation, the last value associated with that key overwrites any previous values.
+
+print(a)
+# Output: {10: 'Sec'}
+# Explanation: The second entry for key 10 (`'Sec'`) overwrites the first (`'Hyd'`). The final dictionary contains only one key-value pair.
+
+print(len(a))
+# Output: 1
+# Explanation: The length of the dictionary is the number of unique keys, which is 1.
+
+# b = {'R' : 'Red' , 'G' : 'Green' , 'B' : 'Blue' , 'Y' : 'Yellow' , 'G' : 'Gray' , 'B' : 'Black'}
+# Explanation: Similar to the above, the values for the duplicate keys 'G' and 'B' are overwritten by their last-assigned values.
+
+print(b)
+# Output: {'R': 'Red', 'G': 'Gray', 'B': 'Black', 'Y': 'Yellow'}
+# Explanation: The final dictionary contains only the unique keys with their last assigned values. The order of keys is typically preserved in modern Python versions (3.7+).
+
+print(len(b))
+# Output: 4
+# Explanation: The dictionary has 4 unique keys: 'R', 'G', 'B', and 'Y'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = {True : 'Yes' , 1 : 'No' , 1.0 : 'May be'}
+
+print(a)
+# Output: {True: 'May be'}  (or sometimes {1: 'May be'})
+# Explanation: Dictionaries store only unique keys. In Python, the hash values of `True`, `1`, and `1.0` are all the same.
+# - The first key-value pair `{True: 'Yes'}` is added.
+# - When `{1: 'No'}` is added, the key `1` is considered a duplicate of `True`, and its value is updated to `'No'`.
+# - When `{1.0: 'May be'}` is added, the key `1.0` is also considered a duplicate, and the value is again updated to `'May be'`.
+# The final dictionary contains only one key-value pair with the last assigned value.
+
+print(len(a))
+# Output: 1
+# Explanation: The length of the dictionary is the number of unique keys, which is 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = { [ ] : 25}
+# Output: Type Error: unhashable type: 'list'
+# Explanation: Dictionary keys must be "hashable" (immutable). A list (`[]`) is a mutable object, so it cannot be used as a key. This error stops the program's execution.
+
+# The following lines of code would produce the outputs below if run independently.
+
+b = { ( ) : 25}
+print(b)
+# Output: {(): 25}
+# Explanation: A tuple `()` is immutable and thus hashable, so it can be used as a dictionary key.
+
+c = { { } : 25}
+# Output: Type Error: unhashable type: 'set'
+# Explanation: A set `{}` is a mutable object and cannot be used as a dictionary key.
+
+d = {'Ramesh' : [9948250500, 9848565090, 9440250404]}
+print(d)
+# Output: {'Ramesh': [9948250500, 9848565090, 9440250404]}
+# Explanation: The key 'Ramesh' is an immutable string and is valid. The value (a list of numbers) can be a mutable object.
+
+print(len(d))
+# Output: 1
+# Explanation: The dictionary has one key-value pair.
+
+e = {set() : 10.8}
+# Output: Type Error: unhashable type: 'set'
+# Explanation: A set is a mutable object and cannot be used as a dictionary key.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a = {}
+print(type(a))
+# Output: <class 'dict'>
+# Explanation: The `{}` literal syntax, when empty, creates an empty dictionary.
+
+print(len(a))
+# Output: 0
+# Explanation: The `len()` function returns the number of key-value pairs in the dictionary, which is 0.
+
+print(a)
+# Output: {}
+# Explanation: This prints the literal representation of an empty dictionary.
+
+b = dict()
+print(type(b))
+# Output: <class 'dict'>
+# Explanation: The `dict()` constructor with no arguments also creates an empty dictionary.
+
+print(len(b))
+# Output: 0
+# Explanation: The length of the empty dictionary `b` is also 0.
+
+print(b)
+# Output: {}
+# Explanation: This prints the literal representation of the empty dictionary created by `dict()`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
